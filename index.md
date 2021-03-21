@@ -39,11 +39,11 @@
       </nav>
       <div class="header__content text-center">
         <span class="header__content__block">HELLO</span>
-        <h1 class="header__content__title">I'M JOHNNY D. DORSCH</h1>
+        <h1 class="header__content__title">I'M Tianamanantsoa RAMBELOSON</h1>
         <ul class="header__content__sub-title">
-          <li>UI&#47;UX DESIGNER <span class="padding">&#45;</span></li>
-          <li>WEB DEVELOPER <span class="padding">&#45;</span></li>
-          <li>PHOTOGRAPHAR</li>
+          <li>UI&#47;Network <span class="padding">&#45;</span></li>
+          <li> System Administrator <span class="padding">&#45;</span></li>
+          <li>Cloud & Devops Engineer</li>
         </ul>
         <a class="header__button" href="#">HAVE PROJECT? LET'S TALK</a>
       </div>
