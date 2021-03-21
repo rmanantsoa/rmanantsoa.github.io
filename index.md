@@ -74,12 +74,12 @@
               <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
               <div class="row row--margin-top">
                 <div class="col-md-4">
-                  <p class="about__bio"><strong>NAME :</strong> Jonny D. Dorsch</p>
+                  <p class="about__bio"><strong>NAME :</strong>Tianamanantsoa RAMBELOSON</p>
                   <p class="about__bio"><strong>AGE :</strong> 21</p>
                 </div>
                 <div class="col-md-4">
-                  <p class="about__bio"><strong>JOB TITLE :</strong> UI&#47;UX Designer</p>
-                  <p class="about__bio"><strong>LOCATION :</strong> California,USA</p>
+                  <p class="about__bio"><strong>JOB TITLE :</strong> UI&#47;System Engineer</p>
+                  <p class="about__bio"><strong>LOCATION :</strong> Madagascar</p>
                 </div>
               </div>
               <div class="row">
