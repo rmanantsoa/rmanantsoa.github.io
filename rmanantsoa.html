@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - RM</title>
+    <!-- Importation de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Importation de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Couleur de fond claire */
+            color: #1f2937; /* Couleur de texte sombre */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .accent-color {
+            color: #4fd1c5; /* Couleur d'accentuation (teal) */
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-item {
+            background-color: #e5e7eb;
+            color: #1f2937;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 9999px;
+            margin: 0.25rem;
+        }
+
+        .animated-icon {
+            animation: bounce-icon 2s infinite;
+        }
+        @keyframes bounce-icon {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-2px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- En-tête simplifié avec seulement la navigation -->
+    <header class="bg-white py-6 shadow-lg fixed top-0 left-0 w-full z-20">
+        <div class="container mx-auto px-4 md:px-6 flex justify-center md:justify-end items-center">
+            <nav>
+                <ul class="flex space-x-4 sm:space-x-8 text-lg font-medium text-gray-600">
+                    <li><a href="#about" class="hover:text-gray-900 transition-colors">À propos</a></li>
+                    <li><a href="#skills" class="hover:text-gray-900 transition-colors">Compétences</a></li>
+                    <li><a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-28 px-4 md:px-6 max-w-5xl space-y-16">
+        
+        <!-- Section À propos de moi (centrée) -->
+        <section id="about" class="card p-6 sm:p-10 text-center">
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/180x180/4fd1c5/1a202c?text=RM" alt="Photo de profil" class="rounded-full border-4 border-accent-color shadow-md w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 mx-auto">
+                </div>
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold accent-color mb-2">RAMBELOSON Tianamanantsoa</h2>
+                    <p class="text-lg sm:text-xl font-light text-gray-600">Ingénieur Système et Réseau</p>
+                    <p class="mt-4 sm:mt-6 leading-relaxed text-gray-600 text-sm sm:text-base">
+                        Je suis un ingénieur système et réseau passionné, avec une solide expertise dans la conception, le déploiement et la maintenance d'infrastructures informatiques. Mon approche est axée sur la résolution de problèmes, la sécurité et l'automatisation. Mon objectif est de construire des systèmes robustes et performants, en adoptant les technologies les plus pertinentes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="card p-6 sm:p-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center accent-color mb-6 sm:mb-8">Compétences techniques</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Carte Compétence : Systèmes -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-server text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Systèmes d'exploitation</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">Windows Server (2016, 2019)</span>
+                        <span class="skill-item">Active Directory</span>
+                        <span class="skill-item">Linux (Debian, Ubuntu)</span>
+                        <span class="skill-item">PowerShell</span>
+                        <span class="skill-item">Gestion GPO</span>
+                        <span class="skill-item">DFS</span>
+                    </div>
+                </div>
+                
+                <!-- Carte Compétence : Réseaux -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-network-wired text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Réseaux</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">TCP/IP, DNS, DHCP</span>
+                        <span class="skill-item">VLAN, Routage</span>
+                        <span class="skill-item">Pare-feu (FortiGate, Sophos, Cisco Firepower, Juniper)</span>
+                        <span class="skill-item">VPN (IPsec, SSL)</span>
+                        <span class="skill-item">Wi-Fi (UniFi)</span>
+                        <span class="skill-item">Switching (Cisco, Aruba, Juniper)</span>
+                    </div>
+                </div>
+                
+                <!-- Carte Compétence : Virtualisation & Cloud -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-cubes text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Virtualisation & Cloud</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">VMware ESXi</span>
+                        <span class="skill-item">Hyper-V</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Microsoft Azure</span>
+                        <span class="skill-item">GCP</span>
+                        <span class="skill-item">Notions AWS</span>
+                    </div>
+                </div>
+
+                <!-- Carte Compétence : Sécurité -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-shield-alt text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Sécurité</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">Gestion des accès (IAM)</span>
+                        <span class="skill-item">SOC (Google Cloud)</span>
+                        <span class="skill-item">Politiques de sécurité</span>
+                        <span class="skill-item">Détection d'intrusion</span>
+                        <span class="skill-item">Hardening de serveurs</span>
+                    </div>
+                </div>
+                
+                <!-- Carte Compétence : Automatisation & Scripting -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-code text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Automatisation & Scripting</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">PowerShell</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">Ansible</span>
+                        <span class="skill-item">Automatisation de tâches AD</span>
+                    </div>
+                </div>
+
+                <!-- Carte Compétence : Base de données -->
+                <div class="p-4 sm:p-6 bg-gray-100 rounded-lg text-center card">
+                    <i class="fas fa-database text-3xl sm:text-4xl accent-color mb-3 sm:mb-4 animated-icon"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Base de données</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-item">SQL Server</span>
+                        <span class="skill-item">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="card p-6 sm:p-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center accent-color mb-6 sm:mb-8">Contactez-moi</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 text-gray-600">
+                <a href="mailto:rtianamanantsoa@gmail.com" class="flex items-center space-x-3 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-envelope text-2xl accent-color"></i>
+                    <span class="text-lg">rtianamanantsoa@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tianamanantsoa-rambeloson" class="flex items-center space-x-3 hover:text-gray-900 transition-colors">
+                    <i class="fab fa-linkedin text-2xl accent-color"></i>
+                    <span class="text-lg">LinkedIn</span>
+                </a>
+                <a href="https://github.com/tianamanantsoa-rambeloson" class="flex items-center space-x-3 hover:text-gray-900 transition-colors">
+                    <i class="fab fa-github text-2xl accent-color"></i>
+                    <span class="text-lg">GitHub</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-200 text-gray-600 py-6 mt-12 text-center text-sm">
+        <div class="container mx-auto px-4 sm:px-6">
+            <p>&copy; 2025 Manantsoa. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
