@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - RM</title>
+    <title>Portfolio - TR</title>
     <!-- Importation de Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Importation de Tailwind CSS -->
@@ -28,12 +28,26 @@
             border: 1px solid #e5e7eb;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Effet de survol sur la carte */
+        .card:hover {
+            transform: scale(1.02); /* Agrandissement léger */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        /* Classe pour l'animation d'apparition */
+        .fade-in-slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Classe pour l'état final de l'animation */
+        .fade-in-slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .skill-item {
@@ -69,9 +83,9 @@
         <div class="container mx-auto px-4 md:px-6 flex justify-center md:justify-end items-center">
             <nav>
                 <ul class="flex space-x-4 sm:space-x-8 text-lg font-medium text-gray-600">
-                    <li><a href="#about" class="hover:text-gray-900 transition-colors">À propos</a></li>
-                    <li><a href="#skills" class="hover:text-gray-900 transition-colors">Compétences</a></li>
-                    <li><a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a></li>
+                    <li><a href="#about" class="hover:text-gray-900 transition-all duration-300">À propos</a></li>
+                    <li><a href="#skills" class="hover:text-gray-900 transition-all duration-300">Compétences</a></li>
+                    <li><a href="#contact" class="hover:text-gray-900 transition-all duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,24 +93,24 @@
 
     <main class="container mx-auto mt-28 px-4 md:px-6 max-w-5xl space-y-16">
         
-        <!-- Section À propos de moi (centrée) -->
-        <section id="about" class="card p-6 sm:p-10 text-center">
+        <!-- Section À propos de moi (centrée) avec la classe d'animation -->
+        <section id="about" class="card p-6 sm:p-10 text-center fade-in-slide-up">
             <div class="flex flex-col items-center space-y-6">
                 <div class="flex-shrink-0">
-                    <img src="https://placehold.co/180x180/4fd1c5/1a202c?text=RM" alt="Photo de profil" class="rounded-full border-4 border-accent-color shadow-md w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 mx-auto">
+                    <img src="https://placehold.co/180x180/4fd1c5/1a202c?text=TR" alt="Photo de profil" class="rounded-full border-4 border-accent-color shadow-md w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 mx-auto">
                 </div>
                 <div>
                     <h2 class="text-3xl sm:text-4xl font-bold accent-color mb-2">RAMBELOSON Tianamanantsoa</h2>
-                    <p class="text-lg sm:text-xl font-light text-gray-600">Ingénieur Système et Réseau</p>
-                    <p class="mt-4 sm:mt-6 leading-relaxed text-gray-600 text-sm sm:text-base">
-                        Je suis un ingénieur système et réseau passionné, avec une solide expertise dans la conception, le déploiement et la maintenance d'infrastructures informatiques. Mon approche est axée sur la résolution de problèmes, la sécurité et l'automatisation. Mon objectif est de construire des systèmes robustes et performants, en adoptant les technologies les plus pertinentes.
+                    <p class="text-lg sm:text-xl font-light text-gray-600 text-center">Ingénieur Systèmes et Réseaux</p>
+                    <p class="mt-4 sm:mt-6 leading-relaxed text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Je suis un ingénieur Système et Réseau passionné, avec une solide expertise dans la conception, le déploiement et la maintenance d'infrastructures informatiques. Mon approche est axée sur la résolution de problèmes, la sécurité et l'automatisation. Mon objectif est de construire des systèmes robustes et performants, en adoptant les technologies les plus pertinentes.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section Compétences -->
-        <section id="skills" class="card p-6 sm:p-10">
+        <!-- Section Compétences avec la classe d'animation -->
+        <section id="skills" class="card p-6 sm:p-10 fade-in-slide-up">
             <h2 class="text-2xl sm:text-3xl font-bold text-center accent-color mb-6 sm:mb-8">Compétences techniques</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -179,8 +193,8 @@
             </div>
         </section>
 
-        <!-- Section Contact -->
-        <section id="contact" class="card p-6 sm:p-10">
+        <!-- Section Contact avec la classe d'animation -->
+        <section id="contact" class="card p-6 sm:p-10 fade-in-slide-up">
             <h2 class="text-2xl sm:text-3xl font-bold text-center accent-color mb-6 sm:mb-8">Contactez-moi</h2>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 text-gray-600">
                 <a href="mailto:rtianamanantsoa@gmail.com" class="flex items-center space-x-3 hover:text-gray-900 transition-colors">
@@ -206,5 +220,30 @@
             <p>&copy; 2025 Manantsoa. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <!-- Script JavaScript pour l'animation au défilement -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.fade-in-slide-up');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
